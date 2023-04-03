@@ -1,0 +1,27 @@
+sut:
+  platform_name: fl31ca105gs1302
+  bios: /root/drivers.io.vmware.validation.capi-automation/bkc_files/bios/bios.bin
+  bmc: /root/drivers.io.vmware.validation.capi-automation/bkc_files/bmc/OBMC.ROM
+  cplds:
+    cpld1: /root/drivers.io.vmware.validation.capi-automation/bkc_files/cplds/cpld1.pof
+    cpld2: /root/drivers.io.vmware.validation.capi-automation/bkc_files/cplds/cpld2.pof
+  esxi:
+    ip: 10.45.134.99
+    user: root
+    password: intel@123
+    vms:
+      vm1:
+        vm_name: vm_clean_machine
+        vm_username: root
+        vm_password: intel@123
+    datastores:
+      nfs:
+        name: vce_nfs_server
+        nfs_share_path: /var/vce/virtual_machines_repository
+      local_datastore:
+        name: default
+nut:
+  name: fl31ca105gw1401-nw3
+capi_server: 
+  capi_username: juan.wolf.maqueda@intel.com
+  capi_password: 'xxxx'
