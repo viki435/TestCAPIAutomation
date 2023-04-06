@@ -122,9 +122,9 @@ class VtCode_Test(BaseContent_Test):
         si = SmartConnectNoSSL(host=esxi_ip, user=esxi_user, pwd=esxi_password, port=443)
         for VM in vms_list:
             print("vmname inside loop", VM)
-            upload_file_to_vm(si,esxi_ip,VM,vm_username,vm_password,"/home/root1/vtmicros", '/drivers.io.vmware.validation.capi-automation/vtmicros')        
+            upload_file_to_vm(si,esxi_ip,VM,vm_username,vm_password,"/home/root1/vtmicros", '/TestCAPIAutomation/temp_CAPI_Automation/vtmicros')        
             time.sleep(20)
-            upload_file_to_vm(si,esxi_ip,VM,vm_username,vm_password,"/home/root1/inputFile.config", '/drivers.io.vmware.validation.capi-automation/inputFile.config')        
+            upload_file_to_vm(si,esxi_ip,VM,vm_username,vm_password,"/home/root1/inputFile.config", '/TestCAPIAutomation/temp_CAPI_Automation/inputFile.config')        
             time.sleep(10)
             cmd_chng_permission = '777 vtmicros'
             cmd_chng_permission_1 = '777 inputFile.config'
@@ -157,7 +157,7 @@ class VtCode_Test(BaseContent_Test):
         time.sleep(60*22)
 
         for VM in vms_list:
-            download_file_from_vm(si, esxi_ip, VM, vm_username, vm_password, '/home/root1/output.txt', "/drivers.io.vmware.validation.capi-automation/testcases/output_"+ VM +".txt", port_no=443)
+            download_file_from_vm(si, esxi_ip, VM, vm_username, vm_password, '/home/root1/output.txt', "/TestCAPIAutomation/temp_CAPI_Automation/output_"+ VM +".txt", port_no=443)
             time.sleep(10)
                 
         for VM in vms_list:
