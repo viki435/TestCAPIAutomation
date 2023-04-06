@@ -43,9 +43,9 @@ class BaseContent_Test(Test):
             self.PASSWORD = self.yaml_configuration['capi_server']['capi_password']
 
             #BKC variables
-            self.UPLOAD = True
-            self.BIOS = self.yaml_configuration['sut']['bios']
-            self.target_name = self.yaml_configuration['sut']['platform_name']
+            #self.UPLOAD = True
+            #self.BIOS = self.yaml_configuration['sut']['bios']
+            #self.target_name = self.yaml_configuration['sut']['platform_name']
 
             """
             sut_yaml_structure = yaml_configuration.get('sut')
@@ -106,10 +106,10 @@ class BaseContent_Test(Test):
             """
 
             #Variables used by BKC Test cases
-            self.UPLOAD = self.params.get( "UPLOAD", default = True )
-            self.BIOS = self.params.get( "BIOS", default = None )
+            #self.UPLOAD = self.params.get( "UPLOAD", default = True )
+            #self.BIOS = self.params.get( "BIOS", default = None )
             
-            self.target_name = self.TARGET_NAMES[0]
+            #self.target_name = self.TARGET_NAMES[0]
 
 
         # ============ Variables used by Network under Test
